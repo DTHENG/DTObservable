@@ -153,7 +153,7 @@ _ExampleSubscriber.m_
 DTObservable is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'DTObservable', '0.1.1'
+    pod 'DTObservable', '0.1.2'
 
 ## Author
 

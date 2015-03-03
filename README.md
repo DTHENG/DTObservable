@@ -1,5 +1,7 @@
 # DTObservable
 
+An implementation of the observable chain pattern for iOS.
+
 [![CI Status](http://img.shields.io/travis/DTHENG/DTObservable.svg?style=flat)](https://travis-ci.org/DTHENG/DTObservable)
 [![Version](https://img.shields.io/cocoapods/v/DTObservable.svg?style=flat)](http://cocoadocs.org/docsets/DTObservable)
 [![License](https://img.shields.io/cocoapods/l/DTObservable.svg?style=flat)](http://cocoadocs.org/docsets/DTObservable)

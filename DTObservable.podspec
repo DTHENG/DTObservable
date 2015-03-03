@@ -10,11 +10,11 @@
 Pod::Spec.new do |s|
   s.name             = "DTObservable"
   s.version          = "0.1.1"
-  s.summary          = "An simple observable structure for iOS."
+  s.summary          = "A simple observable structure for iOS."
   s.description      = <<-DESC
 # DTObservable
 
-Implementation of the observable chain methodology for iOS.
+An implementation of the observable chain pattern for iOS.
   
                      DESC
   s.homepage         = "https://github.com/DTHENG/DTObservable"

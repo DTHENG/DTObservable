@@ -1,0 +1,14 @@
+PODS:
+  - DTObservable (0.1.0)
+
+DEPENDENCIES:
+  - DTObservable (from `../`)
+
+EXTERNAL SOURCES:
+  DTObservable:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DTObservable: 84755524f8abd57d153a2504b8e67187aacb1248
+
+COCOAPODS: 0.35.0

@@ -5,7 +5,6 @@
 
 #import "ExampleSubscriber.h"
 
-
 @implementation ExampleSubscriber
 
 - (void)complete:(NSDictionary *)value {

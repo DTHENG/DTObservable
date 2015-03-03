@@ -5,9 +5,6 @@
 
 #import "DTObservable.h"
 
-@class ExampleSubscriber;
-
-
 @interface ExampleObserver : DTObservable
 
 @end

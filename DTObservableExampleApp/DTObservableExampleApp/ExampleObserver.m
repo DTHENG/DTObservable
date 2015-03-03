@@ -6,7 +6,6 @@
 #import "ExampleObserver.h"
 #import "ExampleSubscriber.h"
 
-
 @implementation ExampleObserver
 
 - (void (^)(DTSubscriber *))new {

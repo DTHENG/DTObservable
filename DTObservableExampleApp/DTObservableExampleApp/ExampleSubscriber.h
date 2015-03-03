@@ -5,6 +5,6 @@
 
 #import <DTObservable/DTSubscriber.h>
 
-
 @interface ExampleSubscriber : DTSubscriber
+
 @end

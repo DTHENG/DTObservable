@@ -10,29 +10,24 @@
 Pod::Spec.new do |s|
   s.name             = "DTObservable"
   s.version          = "0.1.0"
-  s.summary          = "A short description of DTObservable."
+  s.summary          = "An simple observable structure for iOS."
   s.description      = <<-DESC
-                       An optional longer description of DTObservable
+# DTObservable
 
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
-                       DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DTObservable"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+Implementation of the observable chain methodology for iOS.
+  
+                     DESC
+  s.homepage         = "https://github.com/DTHENG/DTObservable"
   s.license          = 'MIT'
   s.author           = { "DTHENG" => "fender5289@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DTObservable.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/DTHENG/DTObservable.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
-  s.source_files = 'Pod/Classes/**/*'
+  s.source_files = '*.{h,m}'
   s.resource_bundles = {
     'DTObservable' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

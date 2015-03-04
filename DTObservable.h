@@ -17,4 +17,6 @@
 
 - (DTObservable *)init:(void (^)(DTSubscriber *))observable;
 
++ (DTObservable *)merge:(DTObservable *)observable,...;
+
 @end

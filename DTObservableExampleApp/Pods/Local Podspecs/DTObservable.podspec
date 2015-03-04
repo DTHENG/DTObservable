@@ -9,12 +9,12 @@
 
 Pod::Spec.new do |s|
   s.name             = "DTObservable"
-  s.version          = "0.1.0"
-  s.summary          = "An simple observable structure for iOS."
+  s.version          = "0.1.2"
+  s.summary          = "A simple observable structure for iOS."
   s.description      = <<-DESC
 # DTObservable
 
-Implementation of the observable chain methodology for iOS.
+An implementation of the observable chain pattern for iOS.
   
                      DESC
   s.homepage         = "https://github.com/DTHENG/DTObservable"
@@ -22,7 +22,7 @@ Implementation of the observable chain methodology for iOS.
   s.author           = { "DTHENG" => "fender5289@gmail.com" }
   s.source           = { :git => "https://github.com/DTHENG/DTObservable.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '8.0'
+  s.platform     = :ios, '7.0'
   s.requires_arc = true
 
   s.source_files = '*.{h,m}'

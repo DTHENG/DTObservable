@@ -11,9 +11,6 @@
 #import "ExampleObserver.h"
 #import "ExampleSubscriber.h"
 
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 
@@ -28,7 +25,7 @@
         [subscriber complete:value];
     }] subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
         BOOL fourTwenty = [value[@"4"] intValue] == 20;
-        NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
+        NSLog(@"\nDoes 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
     } onError:^(NSError *error) {
         NSLog(@"%@", error);
     }]];
@@ -38,6 +35,9 @@
 
     // or like this:
     [[[ExampleObserver alloc] init] subscribe:[[ExampleSubscriber alloc] init]];
+
+    // merge multipul observables
+    [[self exampleMergeObservable] subscribe:[self exampleMergeSubscriber]];
 }
 
 - (DTObservable *)exampleObservable {
@@ -53,7 +53,31 @@
 - (DTSubscriber *)exampleSubscriber {
     return [[DTSubscriber alloc] init:^(NSDictionary *value) {
         BOOL fourTwenty = [value[@"4"] intValue] == 20;
-        NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
+        NSLog(@"\nDoes 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
+    } onError:^(NSError *error) {
+        NSLog(@"%@", error);
+    }];
+}
+
+- (DTObservable *)exampleMergeObservable {
+    return [DTObservable merge:[[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSDictionary *value = @{@"4": @20, @"id": @0};
+        [NSThread sleepForTimeInterval:3.f];
+        [subscriber complete:value];
+    }], [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSDictionary *value = @{@"4": @20, @"id": @1};
+        [NSThread sleepForTimeInterval:2.f];
+        [subscriber complete:value];
+    }], [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSDictionary *value = @{@"4": @20, @"id": @2};
+        [NSThread sleepForTimeInterval:1.f];
+        [subscriber complete:value];
+    }], nil];
+}
+
+- (DTSubscriber *)exampleMergeSubscriber {
+    return [[DTSubscriber alloc] init:^(NSArray *values) {
+        NSLog(@"\n\nMerge Example Results:\n%@", values);
     } onError:^(NSError *error) {
         NSLog(@"%@", error);
     }];

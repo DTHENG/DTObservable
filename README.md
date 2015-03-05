@@ -157,7 +157,8 @@ You can merge several DTObservables into a single observable like so:
 [[DTObservable merge:[self exampleObservableOne], 
 		[self exampleObservableTwo], 
 		[self exampleObservableThree], 
-		[self exampleObservableFour] nil] subscribe:[[DTSubscriber alloc] init:^(NSArray *results) {
+		[self exampleObservableFour], nil] 
+			subscribe:[[DTSubscriber alloc] init:^(NSArray *results) {
 
 	NSLog(@"%@", results[0]); // result of exampleObservableOne
 	NSLog(@"%@", results[1]); // result of exampleObservableTwo

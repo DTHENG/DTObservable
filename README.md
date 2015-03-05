@@ -75,6 +75,7 @@ _ViewController.m_
     }];
 }
 ```
+
 #### File Style
 
 _ViewController.m_
@@ -147,6 +148,26 @@ _ExampleSubscriber.m_
 
 @end
 ```
+
+#### Merging 
+
+You can merge several DTObservables into a single observable like so:
+
+```obj-c
+[[DTObservable merge:[self exampleObservableOne], 
+		[self exampleObservableTwo], 
+		[self exampleObservableThree], 
+		[self exampleObservableFour] nil] subscribe:[[DTSubscriber alloc] init:^(NSArray *results) {
+
+	NSLog(@"%@", results[0]); // result of exampleObservableOne
+	NSLog(@"%@", results[1]); // result of exampleObservableTwo
+	NSLog(@"%@", results[2]); // result of exampleObservableThree
+	NSLog(@"%@", results[3]); // result of exampleObservableFour
+
+} onError:(NSError *mergeError) {
+	NSLog(@"error %@", mergeError);	
+}];
+``` 
 
 ## Installation
 

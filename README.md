@@ -151,7 +151,7 @@ _ExampleSubscriber.m_
 
 #### Merging 
 
-You can merge several DTObservables into a single observable like so:
+You can merge several instances of DTObservable into a single DTObservable, each observable will be evaluated and its result returned as part of an NSArray of all results.
 
 ```obj-c
 [[DTObservable merge:[self exampleObservableOne], 

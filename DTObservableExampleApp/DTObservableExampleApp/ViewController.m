@@ -24,7 +24,7 @@
         [NSThread sleepForTimeInterval:1.f];
         [subscriber complete:value];
     }];
-    [dtObservable setAsync:YES];
+    [dtObservable newThread];
     [dtObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
         BOOL fourTwenty = [value[@"4"] intValue] == 20;
         NSLog(@"\nDoes 4 == 20? %@", fourTwenty ? @"YES" : @"NO");

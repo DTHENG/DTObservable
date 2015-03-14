@@ -10,12 +10,18 @@
 
 @implementation DTObservable {
     void (^observe)(DTSubscriber *);
+    BOOL async;
 }
 
 - (void)subscribe:(DTSubscriber *)subscriber {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    [subscriber setAsync:async];
+    if (async) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self new](subscriber);
+        });
+    } else {
         [self new](subscriber);
-    });
+    }
 }
 
 - (void (^)(DTSubscriber *))new {
@@ -105,6 +111,10 @@
             [subscriber error:[NSError errorWithDomain:@"DTObservable" code:-1 userInfo:@{@"message": [NSString stringWithFormat:@"%@", e]}]];
         }
     }];
+}
+
+- (void)setAsync:(BOOL)isAsynchronous {
+    async = isAsynchronous;
 }
 
 @end

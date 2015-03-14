@@ -11,22 +11,39 @@
 @implementation DTSubscriber {
     void (^complete)(id);
     void (^error)(id);
+    BOOL async;
 }
 
 - (void)complete:(id)object {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    if (async) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self onComplete]) {
+                [self onComplete](object);
+            }
+        });
+    } else {
         if ([self onComplete]) {
             [self onComplete](object);
         }
-    });
+    }
 }
 
 - (void)error:(id)object {
-    dispatch_async(dispatch_get_main_queue(), ^{
+    if (async) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self onError]) {
+                [self onError](object);
+            }
+        });
+    } else {
         if ([self onError]) {
             [self onError](object);
         }
-    });
+    }
+}
+
+- (void)setAsync:(BOOL)isAsynchronous {
+    async = isAsynchronous;
 }
 
 - (void (^)(id))onComplete {

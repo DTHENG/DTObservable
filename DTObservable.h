@@ -19,4 +19,6 @@
 
 + (DTObservable *)merge:(DTObservable *)observable,...;
 
+- (void)setAsync:(BOOL)isAsynchronous;
+
 @end

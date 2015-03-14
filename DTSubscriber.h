@@ -15,4 +15,6 @@
 
 - (DTSubscriber *)init:(void (^)(id))onComplete onError:(void (^)(id))onError ;
 
+- (void)setAsync:(BOOL)isAsynchronous;
+
 @end

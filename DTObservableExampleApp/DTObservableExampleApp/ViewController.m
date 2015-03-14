@@ -17,15 +17,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    DTObservable *dtObservable = [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+    DTObservable *exampleObservable = [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
         NSDictionary *value = @{@"4": @20};
 
         // Lets pretend something cpu intensive happens here
         [NSThread sleepForTimeInterval:1.f];
         [subscriber complete:value];
     }];
-    [dtObservable newThread];
-    [dtObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
+    [exampleObservable newThread];
+    [exampleObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
         BOOL fourTwenty = [value[@"4"] intValue] == 20;
         NSLog(@"\nDoes 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
     } onError:^(NSError *error) {

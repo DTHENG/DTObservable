@@ -9,6 +9,6 @@
 // DTObservable
 #define COCOAPODS_POD_AVAILABLE_DTObservable
 #define COCOAPODS_VERSION_MAJOR_DTObservable 0
-#define COCOAPODS_VERSION_MINOR_DTObservable 1
-#define COCOAPODS_VERSION_PATCH_DTObservable 2
+#define COCOAPODS_VERSION_MINOR_DTObservable 2
+#define COCOAPODS_VERSION_PATCH_DTObservable 0
 

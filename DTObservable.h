@@ -19,4 +19,6 @@
 
 + (DTObservable *)merge:(DTObservable *)observable,...;
 
+- (void)newThread;
+
 @end

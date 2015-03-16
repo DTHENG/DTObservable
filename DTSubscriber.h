@@ -12,7 +12,6 @@
 
 - (void)complete:(id)object;
 - (void)error:(id)object;
-- (void)setAsync:(BOOL)isAsync;
 
 - (DTSubscriber *)init:(void (^)(id))onComplete onError:(void (^)(id))onError ;
 

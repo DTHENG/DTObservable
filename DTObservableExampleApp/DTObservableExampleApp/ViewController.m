@@ -38,7 +38,7 @@
     // or like this:
     [[[ExampleObserver alloc] init] subscribe:[[ExampleSubscriber alloc] init]];
 
-    // merge multipul observables
+    // merge multiple observables
     [[self exampleMergeObservable] subscribe:[self exampleMergeSubscriber]];
 }
 

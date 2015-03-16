@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import <DTObservable/DTSubscriber.h>
+#import <DTObservable/DTObservable.h>
 
 @interface DTObservableExampleAppTests : XCTestCase
 
@@ -25,15 +27,72 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+- (void)testSynchronous {
+
+    XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
+
+    DTObservable *exampleObservable = [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSDictionary *value = @{@"4": @20};
+
+        if ( ! [NSThread currentThread].isMainThread) {
+            XCTFail(@"Synchronous observable not being executed on main thread!");
+            [expectation fulfill];
+        } else {
+            [subscriber complete:value];
+        }
+    }];
+    [exampleObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
+        BOOL fourTwenty = [value[@"4"] intValue] == 20;
+        if (fourTwenty) {
+            [expectation fulfill];
+        } else {
+            XCTFail(@"Unexpected result returned: %@", value);
+            [expectation fulfill];
+        }
+    } onError:^(NSError *error) {
+        XCTFail(@"Example Observable failed with error: %@", error);
+        [expectation fulfill];
+    }]];
+
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)testAsynchronous {
+
+    XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
+
+    DTObservable *exampleObservable = [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSDictionary *value = @{@"4": @20};
+
+        if ([NSThread currentThread].isMainThread) {
+            XCTFail(@"Asynchronous observable not being executed on new thread!");
+            [expectation fulfill];
+        } else {
+            [subscriber complete:value];
+        }
+    }];
+    [exampleObservable newThread];
+    [exampleObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
+        BOOL fourTwenty = [value[@"4"] intValue] == 20;
+        if (fourTwenty) {
+            [expectation fulfill];
+        } else {
+            XCTFail(@"Unexpected result returned: %@", value);
+            [expectation fulfill];
+        }
+    } onError:^(NSError *error) {
+        XCTFail(@"Example Observable failed with error: %@", error);
+        [expectation fulfill];
+    }]];
+
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
     }];
 }
 

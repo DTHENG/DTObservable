@@ -222,8 +222,6 @@
 			mainGroup = 7ACD3D331AA555030090FD5A;
 			productRefGroup = 7ACD3D3D1AA555030090FD5A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-			);
 			projectRoot = "";
 			targets = (
 				7ACD3D3B1AA555030090FD5A /* DTObservableExampleApp */,
@@ -438,6 +436,7 @@
 		};
 		7ACD3D631AA555030090FD5A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE275486BFE24D1E39EC4BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -457,6 +456,7 @@
 		};
 		7ACD3D641AA555030090FD5A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DE275486BFE24D1E39EC4BA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -489,6 +489,7 @@
 				7ACD3D611AA555030090FD5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ACD3D621AA555030090FD5A /* Build configuration list for PBXNativeTarget "DTObservableExampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +498,7 @@
 				7ACD3D641AA555030090FD5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

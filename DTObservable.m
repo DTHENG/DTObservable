@@ -14,6 +14,7 @@
 }
 
 - (void)subscribe:(DTSubscriber *)subscriber {
+    [subscriber setAsync:async];
     if (async) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self new](subscriber);

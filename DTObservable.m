@@ -16,6 +16,7 @@
 - (void)subscribe:(DTSubscriber *)subscriber {
     if (async) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [[NSThread currentThread] setName:@"DTObservable"];
             [self new](subscriber);
         });
     } else {

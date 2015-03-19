@@ -175,7 +175,7 @@ You can merge several instances of DTObservable into a single DTObservable, each
 DTObservable is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
-    pod 'DTObservable', '0.2.3'
+    pod 'DTObservable', '0.2.4'
 
 ## Author
 

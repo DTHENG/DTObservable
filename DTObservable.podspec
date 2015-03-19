@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "DTObservable"
-  s.version          = "0.2.2"
+  s.version          = "0.2.3"
   s.summary          = "A simple observable structure for iOS."
   s.description      = <<-DESC
 # DTObservable

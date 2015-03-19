@@ -113,8 +113,9 @@
     }];
 }
 
-- (void)newThread {
+- (DTObservable *)newThread {
     async = YES;
+    return self;
 }
 
 @end

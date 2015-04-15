@@ -5,8 +5,6 @@
 [![License](https://img.shields.io/cocoapods/l/DTObservable.svg?style=flat)](http://cocoadocs.org/docsets/DTObservable)
 [![Platform](https://img.shields.io/cocoapods/p/DTObservable.svg?style=flat)](http://cocoadocs.org/docsets/DTObservable)
 
-- - -
-
 ## Simple style, powerful implications
 
 ```obj-c

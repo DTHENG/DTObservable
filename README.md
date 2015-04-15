@@ -58,13 +58,9 @@ it, simply add the following line to your Podfile:
 
     pod 'DTObservable', '0.2.4'
 
-- - - 
-
 ## Author
 
 DTHENG, fender5289@gmail.com
-
-- - - 
 
 ## License
 

@@ -38,8 +38,6 @@ To run the example project, clone the repo, and run `pod install` from the DTObs
     // Success!
     NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
 
-} onComplete:^{
-    NSLog(@"finished!");
 } onError:^(NSError *error) {
     NSLog(@"%@", error);
 }]];

@@ -50,8 +50,6 @@
             XCTFail(@"Unexpected result returned: %@", value);
             [expectation fulfill];
         }
-    } onComplete:^{
-        NSLog(@"finished!");
     } onError:^(NSError *error) {
         XCTFail(@"Example Observable failed with error: %@", error);
         [expectation fulfill];
@@ -88,8 +86,6 @@
             XCTFail(@"Unexpected result returned: %@", value);
             [expectation fulfill];
         }
-    } onComplete:^{
-        NSLog(@"finished!");
     } onError:^(NSError *error) {
         XCTFail(@"Example Observable failed with error: %@", error);
         [expectation fulfill];

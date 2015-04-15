@@ -9,21 +9,32 @@
 #import "DTSubscriber.h"
 
 @implementation DTSubscriber {
-    void (^complete)();
+    void (^complete)(id);
     void (^error)(id);
-    void (^next)(id);
 }
 
 - (void)complete {
     if ( ! [NSThread currentThread].isMainThread) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self onComplete]) {
-                [self onComplete];
+                if (_results != nil) {
+                    if (_results.count == 1) {
+                        [self onComplete](_results[0]);
+                    } else {
+                        [self onComplete](_results);
+                    }
+                }
             }
         });
     } else {
         if ([self onComplete]) {
-            [self onComplete];
+            if (_results != nil) {
+                if (_results.count == 1) {
+                    [self onComplete](_results[0]);
+                } else {
+                    [self onComplete](_results);
+                }
+            }
         }
     }
 }
@@ -43,12 +54,14 @@
 }
 
 - (void)next:(id)object {
-    if ([self onNext]) {
-        [self onNext](object);
+    if (_results == nil) {
+        _results = [[NSArray alloc] init];
     }
+    NSMutableArray *mResults = [_results mutableCopy];
+    [mResults addObject:object];
 }
 
-- (void (^)())onComplete {
+- (void (^)(id))onComplete {
     return complete;
 }
 
@@ -56,12 +69,7 @@
     return error;
 }
 
-- (void (^)(id))onNext {
-    return next;
-}
-
-- (DTSubscriber *)init:(void (^)(id))onNext onComplete:(void (^)())onComplete onError:(void (^)(id))onError {
-    next = onNext;
+- (DTSubscriber *)init:(void (^)(id))onComplete onError:(void (^)(id))onError {
     complete = onComplete;
     error = onError;
     return self;

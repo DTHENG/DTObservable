@@ -12,13 +12,8 @@
 @interface DTObservable : NSObject 
 
 - (void)subscribe:(DTSubscriber *)subscriber;
-
 - (void (^)(DTSubscriber *))new;
-
 - (DTObservable *)init:(void (^)(DTSubscriber *))observable;
-
-+ (DTObservable *)merge:(DTObservable *)observable,...;
-
 - (DTObservable *)newThread;
 
 @end

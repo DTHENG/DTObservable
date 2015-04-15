@@ -10,9 +10,11 @@
 
 @interface DTSubscriber : NSObject
 
-- (void)complete:(id)object;
-- (void)error:(id)object;
+@property NSArray *results;
 
-- (DTSubscriber *)init:(void (^)(id))onComplete onError:(void (^)(id))onError ;
+- (void)next:(id)object;
+- (void)complete;
+- (void)error:(id)object;
+- (DTSubscriber *)init:(void (^)(id))onComplete onError:(void (^)(id))onError;
 
 @end

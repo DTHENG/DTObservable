@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import <DTObservable/DTSubscriber.h>
 #import <DTObservable/DTObservable.h>
 
 @interface DTObservableExampleAppTests : XCTestCase
@@ -38,9 +37,11 @@
             XCTFail(@"Synchronous observable not being executed on main thread!");
             [expectation fulfill];
         } else {
-            [subscriber complete:value];
+            [subscriber next:value];
+            [subscriber complete];
         }
     }];
+    
     [exampleObservable subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
         BOOL fourTwenty = [value[@"4"] intValue] == 20;
         if (fourTwenty) {
@@ -72,7 +73,8 @@
             XCTFail(@"Asynchronous observable not being executed on new thread!");
             [expectation fulfill];
         } else {
-            [subscriber complete:value];
+            [subscriber next:value];
+            [subscriber complete];
         }
     }];
     [exampleObservable newThread];

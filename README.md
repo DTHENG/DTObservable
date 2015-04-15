@@ -13,7 +13,9 @@ An implementation of the observable chain pattern for iOS.
 
 To run the example project, clone the repo, and run `pod install` from the DTObservableExampleApp directory first.
 
-#### Simple Style
+- - -
+
+## Simple style, powerful implications
 
 ```obj-c
 - (void)viewDidLoad {
@@ -28,7 +30,8 @@ To run the example project, clone the repo, and run `pod install` from the DTObs
 		[NSThread sleepForTimeInterval:1.f];
 	
 		// Notify the subscriber
-		[subscriber complete:value];
+		[subscriber next:value];
+		[subscriber complete];
 	
 	}] subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
 
@@ -38,13 +41,13 @@ To run the example project, clone the repo, and run `pod install` from the DTObs
 		// Success!
 		NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
 
+	} onComplete:^{
+	    NSLog(@"finished!");
 	} onError:^(NSError *error) {
 		NSLog(@"%@", error);
 	}]];
 }
 ```
-
-[More Examples](README_examples.md)
 
 - - -
 
@@ -55,9 +58,13 @@ it, simply add the following line to your Podfile:
 
     pod 'DTObservable', '0.2.4'
 
+- - - 
+
 ## Author
 
 DTHENG, fender5289@gmail.com
+
+- - - 
 
 ## License
 

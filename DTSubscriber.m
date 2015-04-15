@@ -13,16 +13,28 @@
     void (^error)(id);
 }
 
-- (void)complete:(id)object {
+- (void)complete {
     if ( ! [NSThread currentThread].isMainThread) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self onComplete]) {
-                [self onComplete](object);
+                if (_results != nil) {
+                    if (_results.count == 1) {
+                        [self onComplete](_results[0]);
+                    } else {
+                        [self onComplete](_results);
+                    }
+                }
             }
         });
     } else {
         if ([self onComplete]) {
-            [self onComplete](object);
+            if (_results != nil) {
+                if (_results.count == 1) {
+                    [self onComplete](_results[0]);
+                } else {
+                    [self onComplete](_results);
+                }
+            }
         }
     }
 }
@@ -39,6 +51,14 @@
             [self onError](object);
         }
     }
+}
+
+- (void)next:(id)object {
+    if (_results == nil) {
+        _results = [[NSArray alloc] init];
+    }
+    NSMutableArray *mResults = [_results mutableCopy];
+    [mResults addObject:object];
 }
 
 - (void (^)(id))onComplete {

@@ -13,38 +13,35 @@ An implementation of the observable chain pattern for iOS.
 
 To run the example project, clone the repo, and run `pod install` from the DTObservableExampleApp directory first.
 
-#### Simple Style
+- - -
+
+## Simple style, powerful implications
 
 ```obj-c
-- (void)viewDidLoad {
-    [super viewDidLoad];
+[[[DTObservable alloc] init:^(DTSubscriber *subscriber) {
 
-	[[[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+    // Setup some data
+    NSDictionary *value = @{@"4": @20};
 
-		// Setup some data
-		NSDictionary *value = @{@"4": @20};
+    // Lets pretend something cpu intensive happens here
+    [NSThread sleepForTimeInterval:1.f];
 
-		// Lets pretend something cpu intensive happens here
-		[NSThread sleepForTimeInterval:1.f];
-	
-		// Notify the subscriber
-		[subscriber complete:value];
-	
-	}] subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
+    // Notify the subscriber
+    [subscriber next:value];
+    [subscriber complete];
 
-		// Confirm the result
-		BOOL fourTwenty = [value[@"4"] intValue] == 20;
+}] subscribe:[[DTSubscriber alloc] init:^(NSDictionary *value) {
 
-		// Success!
-		NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
+    // Confirm the result
+    BOOL fourTwenty = [value[@"4"] intValue] == 20;
 
-	} onError:^(NSError *error) {
-		NSLog(@"%@", error);
-	}]];
-}
+    // Success!
+    NSLog(@"Does 4 == 20? %@", fourTwenty ? @"YES" : @"NO");
+
+} onError:^(NSError *error) {
+    NSLog(@"%@", error);
+}]];
 ```
-
-[More Examples](README_examples.md)
 
 - - -
 

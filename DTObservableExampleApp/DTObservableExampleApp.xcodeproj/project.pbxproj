@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		230857172F12FC8FB7F24A47 /* ExampleSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 23085100E28C4E20F6688F0E /* ExampleSubscriber.m */; };
-		23085FEEDFC9DAC668176B81 /* ExampleObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 23085C6AB710557543CF715A /* ExampleObserver.m */; };
 		7ACD3D421AA555030090FD5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD3D411AA555030090FD5A /* main.m */; };
 		7ACD3D451AA555030090FD5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD3D441AA555030090FD5A /* AppDelegate.m */; };
 		7ACD3D481AA555030090FD5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ACD3D471AA555030090FD5A /* ViewController.m */; };
@@ -30,10 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		23085100E28C4E20F6688F0E /* ExampleSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleSubscriber.m; sourceTree = "<group>"; };
-		23085C6AB710557543CF715A /* ExampleObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleObserver.m; sourceTree = "<group>"; };
-		23085CF5C9C39D540EB4D395 /* ExampleObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleObserver.h; sourceTree = "<group>"; };
-		23085E8D4B20C7DE04A724A2 /* ExampleSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleSubscriber.h; sourceTree = "<group>"; };
 		276F13FB9FAE3502CE905C68 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6F654B458DB87F631CFE2F0B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACD3D3C1AA555030090FD5A /* DTObservableExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DTObservableExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,10 +96,6 @@
 				7ACD3D4C1AA555030090FD5A /* Images.xcassets */,
 				7ACD3D4E1AA555030090FD5A /* LaunchScreen.xib */,
 				7ACD3D3F1AA555030090FD5A /* Supporting Files */,
-				23085C6AB710557543CF715A /* ExampleObserver.m */,
-				23085CF5C9C39D540EB4D395 /* ExampleObserver.h */,
-				23085100E28C4E20F6688F0E /* ExampleSubscriber.m */,
-				23085E8D4B20C7DE04A724A2 /* ExampleSubscriber.h */,
 			);
 			path = DTObservableExampleApp;
 			sourceTree = "<group>";
@@ -291,8 +281,6 @@
 				7ACD3D481AA555030090FD5A /* ViewController.m in Sources */,
 				7ACD3D451AA555030090FD5A /* AppDelegate.m in Sources */,
 				7ACD3D421AA555030090FD5A /* main.m in Sources */,
-				23085FEEDFC9DAC668176B81 /* ExampleObserver.m in Sources */,
-				230857172F12FC8FB7F24A47 /* ExampleSubscriber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +444,7 @@
 		};
 		7ACD3D641AA555030090FD5A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DE275486BFE24D1E39EC4BA /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 276F13FB9FAE3502CE905C68 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

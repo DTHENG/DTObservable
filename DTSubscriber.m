@@ -16,25 +16,23 @@
 - (void)complete {
     if ( ! [NSThread currentThread].isMainThread) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            if ([self onComplete]) {
-                if (_results != nil) {
-                    if (_results.count == 1) {
-                        [self onComplete](_results[0]);
-                    } else {
-                        [self onComplete](_results);
-                    }
-                }
-            }
+            [self handleResults];
         });
     } else {
-        if ([self onComplete]) {
-            if (_results != nil) {
-                if (_results.count == 1) {
-                    [self onComplete](_results[0]);
-                } else {
-                    [self onComplete](_results);
-                }
+        [self handleResults];
+    }
+}
+
+- (void)handleResults {
+    if ([self onComplete]) {
+        if (_results != nil) {
+            if (_results.count == 1) {
+                [self onComplete](_results[0]);
+            } else {
+                [self onComplete](_results);
             }
+        } else {
+            [self onComplete](nil);
         }
     }
 }
@@ -59,6 +57,7 @@
     }
     NSMutableArray *mResults = [_results mutableCopy];
     [mResults addObject:object];
+    _results = [[NSArray alloc] initWithArray:mResults];
 }
 
 - (void (^)(id))onComplete {

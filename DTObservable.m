@@ -56,4 +56,33 @@
     }];
 }
 
+- (DTObservable *)filter:(BOOL (^)(id))function {
+    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        DTSubscriber *intermediarySubscriber = [[DTSubscriber alloc] init:^(id object) {
+            if ([object isKindOfClass:[NSArray class]]) {
+                NSArray *array = (NSArray *)object;
+                for (NSUInteger i = 0; i < array.count; i++) {
+                    if (function(array[i])) {
+                        [subscriber next:array[i]];
+                    }
+                }
+            } else {
+                if (function(object)) {
+                    [subscriber next:object];
+                }
+            }
+            [subscriber complete];
+        } onError:^(NSError *error) {
+            [subscriber error:error];
+        }];
+        if (async) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self new](intermediarySubscriber);
+            });
+        } else {
+            [self new](intermediarySubscriber);
+        }
+    }];
+}
+
 @end

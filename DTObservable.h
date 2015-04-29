@@ -16,5 +16,6 @@
 - (DTObservable *)init:(void (^)(DTSubscriber *))observable;
 - (DTObservable *)newThread;
 - (DTObservable *)flatMap:(id (^)(id))object;
+- (DTObservable *)filter:(BOOL (^)(id))function;
 
 @end

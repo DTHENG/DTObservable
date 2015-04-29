@@ -41,8 +41,7 @@
 - (DTObservable *)flatMap:(DTObservable * (^)(id))block {
     return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
         DTSubscriber *intermediarySubscriber = [[DTSubscriber alloc] init:^(id object) {
-            [subscriber next:block(object)];
-            [subscriber complete];
+            [block(object) subscribe:subscriber];
         } onError:^(NSError *error) {
             [subscriber error:error];
         }];
@@ -176,9 +175,17 @@
 
 + (DTObservable *)just:(id)object {
     return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
-        [subscriber next:object];
+        if (object != nil) {
+            [subscriber next:object];
+        }
         [subscriber complete];
     }];
+}
+
+- (void)subscribe {
+    [self new]([[DTSubscriber alloc] init:^(id object) {} onError:^(NSError *error) {
+        NSLog(@"ERROR: %@", error);
+    }]);
 }
 
 @end

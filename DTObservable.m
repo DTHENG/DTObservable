@@ -38,4 +38,22 @@
     return self;
 }
 
+- (DTObservable *)flatMap:(id (^)(id))function {
+    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        DTSubscriber *intermediarySubscriber = [[DTSubscriber alloc] init:^(id object) {
+            [subscriber next:function(object)];
+            [subscriber complete];
+        } onError:^(NSError *error) {
+            [subscriber error:error];
+        }];
+        if (async) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                [self new](intermediarySubscriber);
+            });
+        } else {
+            [self new](intermediarySubscriber);
+        }
+    }];
+}
+
 @end

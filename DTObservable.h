@@ -15,12 +15,13 @@
 - (void (^)(DTSubscriber *))new;
 - (DTObservable *)init:(void (^)(DTSubscriber *))observable;
 - (DTObservable *)newThread;
-- (DTObservable *)flatMap:(id (^)(id))block;
+- (DTObservable *)flatMap:(DTObservable * (^)(id))block;
 - (DTObservable *)filter:(BOOL (^)(id))block;
 
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(id (^)(id, id))block;
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(id (^)(id, id, id))block;
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(id (^)(id, id, id, id))block;
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(id (^)(id, id, id, id, id))block;
++ (DTObservable *)just:(id)object;
 
 @end

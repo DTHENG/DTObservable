@@ -31,5 +31,6 @@
 + (DTObservable *)just:(id)object;
 + (DTObservable *)empty;
 + (DTObservable *)concat:(NSArray *)arrayOfObservables;
++ (DTObservable *)create:(void (^)(DTSubscriber *))observer;
 
 @end

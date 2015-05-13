@@ -122,4 +122,16 @@
     }];
 }
 
+- (void)testConcat {
+    XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
+    
+    NSArray *observables = @[[[DTObservable alloc] init:^(DTSubscriber *subscriber) {}]];
+    
+    [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
 @end

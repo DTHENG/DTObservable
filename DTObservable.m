@@ -84,6 +84,10 @@
     }];
 }
 
++ (DTObservable *)create:(void (^)(DTSubscriber *))observer {
+    return [[DTObservable alloc] init:observer];
+}
+
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(id (^)(id, id))block {
     return [observable1 flatMap:^(id object1) {
         return [observable2 flatMap:^(id object2) {

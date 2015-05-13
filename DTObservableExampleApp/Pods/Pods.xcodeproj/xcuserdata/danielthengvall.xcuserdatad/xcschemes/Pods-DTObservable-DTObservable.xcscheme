@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3781468352A7FB9DD5FEE79"
+               BlueprintIdentifier = "84090405462C5F29E490FC44"
                BuildableName = "DTObservable.bundle"
                BlueprintName = "Pods-DTObservable-DTObservable"
                ReferencedContainer = "container:Pods.xcodeproj">

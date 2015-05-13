@@ -7,198 +7,215 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08B4C3EECD59147FF5CF13AC /* DTSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = B09B226E8C2CE6FF2907D5E1 /* DTSubscriber.m */; };
-		41C3C45C2163E6D2EB687595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B9A287B6F2944F3FFD48E /* Foundation.framework */; };
-		8E66829192EE92FD4327FC96 /* DTObservable.m in Sources */ = {isa = PBXBuildFile; fileRef = 071253C04DBA6D3876C5E6EC /* DTObservable.m */; };
-		A0B41F08C286495B509CA855 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A108FFD14398B1603EAD9A /* Pods-dummy.m */; };
-		CF91E3980B1F773F6B9B71B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 443B9A287B6F2944F3FFD48E /* Foundation.framework */; };
-		D96C3F607F368AD5658655B0 /* Pods-DTObservable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 757855A6751C39B2ACF94046 /* Pods-DTObservable-dummy.m */; };
-		E932C4F1E6111251C2B53F89 /* DTObservable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C38C3CD20A77FCE633C32E9 /* DTObservable.h */; };
-		FCB8D9A3CC0D9C461C0DB32E /* DTSubscriber.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C5C98B87EEBC88A4C8DC55 /* DTSubscriber.h */; };
+		04A9383CDC1D1AEC7BE2C50A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FCC587B41D5ED00C7EC7D /* Foundation.framework */; };
+		13F15749304B5D155B735555 /* DTObservable.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0ADA61AF204C7B94281530 /* DTObservable.h */; };
+		37EF08B5CD54630A7C16836A /* DTSubscriber.h in Headers */ = {isa = PBXBuildFile; fileRef = 7149C22289DA31A1D4028BDB /* DTSubscriber.h */; };
+		3800177FCE3406FC5B7A3774 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FCC587B41D5ED00C7EC7D /* Foundation.framework */; };
+		8DD34D9C971C94F45F25B834 /* DTObservable.m in Sources */ = {isa = PBXBuildFile; fileRef = A1871D76801998A3C9AEB7D0 /* DTObservable.m */; };
+		B2F09328DA6513E218D7EB57 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2A8DB46F06E7D543A37D02 /* Pods-dummy.m */; };
+		D0F33F471CE84BC3D180D215 /* Pods-DTObservable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6AB43A20AB88131D843C3A /* Pods-DTObservable-dummy.m */; };
+		EE41ED10BDBB5D38A4B7BE06 /* DTSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 12EE37E54E3314A3578A620E /* DTSubscriber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7822134FD99E35C9916C16E4 /* PBXContainerItemProxy */ = {
+		55DA9F33E67579AF52C8F1B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3ADB57067832932661F9BAB6 /* Project object */;
+			containerPortal = 95F13883AC5EA76DFF180789 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = FAE1051E9A217961E7DE5D98;
-			remoteInfo = "Pods-DTObservable";
-		};
-		D9B0BA5D5D1722B25949056D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3ADB57067832932661F9BAB6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D3781468352A7FB9DD5FEE79;
+			remoteGlobalIDString = 84090405462C5F29E490FC44;
 			remoteInfo = "Pods-DTObservable-DTObservable";
+		};
+		BE0B58F63594958DC070A6ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95F13883AC5EA76DFF180789 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9960A174896DC53FB6BB8F17;
+			remoteInfo = "Pods-DTObservable";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		071253C04DBA6D3876C5E6EC /* DTObservable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DTObservable.m; sourceTree = "<group>"; };
-		32C5C98B87EEBC88A4C8DC55 /* DTSubscriber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DTSubscriber.h; sourceTree = "<group>"; };
-		3A66808F189ABDD81409CC4A /* DTObservable.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTObservable.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		40A108FFD14398B1603EAD9A /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		443B9A287B6F2944F3FFD48E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5DFC33D051E74EA01DED5A40 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		757855A6751C39B2ACF94046 /* Pods-DTObservable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DTObservable-dummy.m"; sourceTree = "<group>"; };
-		9C38C3CD20A77FCE633C32E9 /* DTObservable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DTObservable.h; sourceTree = "<group>"; };
-		A852A9EED18E6D772673203B /* libPods-DTObservable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTObservable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B09B226E8C2CE6FF2907D5E1 /* DTSubscriber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DTSubscriber.m; sourceTree = "<group>"; };
-		B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTObservable-Private.xcconfig"; sourceTree = "<group>"; };
-		BBBAFD80E6F59E31F78B39B7 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		BBBB4E1B3C14703A83B57394 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C306370EBD4AA2EEA1BCBF44 /* Pods-DTObservable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DTObservable-prefix.pch"; sourceTree = "<group>"; };
-		CAD49D916640878FA5C2742E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		D7B3F60C53E028F3311344E3 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		E34FE4B8BE5B13EB12F86063 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		ED2711BB3040757EEB190A2C /* Pods-DTObservable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTObservable.xcconfig"; sourceTree = "<group>"; };
-		F4A4E052AB8F684673A976F0 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		F8A68145CCD4CD334563F8BE /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		12EE37E54E3314A3578A620E /* DTSubscriber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DTSubscriber.m; sourceTree = "<group>"; };
+		1D161BB30C63DF5C3D9F51DD /* Pods-DTObservable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DTObservable-prefix.pch"; sourceTree = "<group>"; };
+		23EB4D74C966AE11B9CBAEC2 /* DTObservable.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTObservable.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTObservable-Private.xcconfig"; sourceTree = "<group>"; };
+		4318EFAECFF9538E26F49780 /* Pods-DTObservable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DTObservable.xcconfig"; sourceTree = "<group>"; };
+		446B58B1FE7FD13916F410BC /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		6469740C2261DF4FEFB6DBB3 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		7149C22289DA31A1D4028BDB /* DTSubscriber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DTSubscriber.h; sourceTree = "<group>"; };
+		7C0ADA61AF204C7B94281530 /* DTObservable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = DTObservable.h; sourceTree = "<group>"; };
+		7C3B0821721709C3096D9DAB /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A1225875C31B4EAD11D1144C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1871D76801998A3C9AEB7D0 /* DTObservable.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = DTObservable.m; sourceTree = "<group>"; };
+		ABACFBA0EECF337E287EAA7A /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		AF1FBA1BDE9AA950F30414D8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		B47657ED45889A49BC1A9EA8 /* libPods-DTObservable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTObservable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1FCC587B41D5ED00C7EC7D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CE6AB43A20AB88131D843C3A /* Pods-DTObservable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DTObservable-dummy.m"; sourceTree = "<group>"; };
+		D501FD73C34843DBBE467B82 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		DC2A8DB46F06E7D543A37D02 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		E42C6887A007CEFC69509B33 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0F2813EDC58C2ABB288FC191 /* Frameworks */ = {
+		0B316ADCEBE1E449528E9324 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF91E3980B1F773F6B9B71B8 /* Foundation.framework in Frameworks */,
+				3800177FCE3406FC5B7A3774 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		37D1F28A97AF46631580490A /* Frameworks */ = {
+		3D3767232C4DAA8CE8AA21B4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41C3C45C2163E6D2EB687595 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F5C22DDEC0C18C290F677D02 /* Frameworks */ = {
+		A55E529846F0D6693C92EFB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A9383CDC1D1AEC7BE2C50A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B08B3572494050D933B716C /* iOS */ = {
+		23932B2E9F7251340E308EAE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				443B9A287B6F2944F3FFD48E /* Foundation.framework */,
+				AABAB848BF38CC1EFDAEB70D /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		38238EB99A6E47E6FCB8EB08 /* DTObservable */ = {
+		30914474D48BCB1893070C8F = {
 			isa = PBXGroup;
 			children = (
-				9C38C3CD20A77FCE633C32E9 /* DTObservable.h */,
-				071253C04DBA6D3876C5E6EC /* DTObservable.m */,
-				32C5C98B87EEBC88A4C8DC55 /* DTSubscriber.h */,
-				B09B226E8C2CE6FF2907D5E1 /* DTSubscriber.m */,
-				DD4F9BEE8BCA14D29E1A0DE1 /* Support Files */,
+				D501FD73C34843DBBE467B82 /* Podfile */,
+				43DA00024D557F4F03E895DC /* Development Pods */,
+				23932B2E9F7251340E308EAE /* Frameworks */,
+				B4C08C581DC69BC7E6BC3A4B /* Products */,
+				66549AC576240F1918B6E5CA /* Targets Support Files */,
 			);
-			name = DTObservable;
-			path = ../..;
 			sourceTree = "<group>";
 		};
-		4B65F3AF65B0DC4362C61704 /* Pods */ = {
+		43DA00024D557F4F03E895DC /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F8A68145CCD4CD334563F8BE /* Pods-acknowledgements.markdown */,
-				BBBAFD80E6F59E31F78B39B7 /* Pods-acknowledgements.plist */,
-				40A108FFD14398B1603EAD9A /* Pods-dummy.m */,
-				D7B3F60C53E028F3311344E3 /* Pods-environment.h */,
-				E34FE4B8BE5B13EB12F86063 /* Pods-resources.sh */,
-				CAD49D916640878FA5C2742E /* Pods.debug.xcconfig */,
-				5DFC33D051E74EA01DED5A40 /* Pods.release.xcconfig */,
+				AAD6BA62FC7A8A8203393D7D /* DTObservable */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		47C3E35131FF23AD7402A996 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C3B0821721709C3096D9DAB /* Pods-acknowledgements.markdown */,
+				6469740C2261DF4FEFB6DBB3 /* Pods-acknowledgements.plist */,
+				DC2A8DB46F06E7D543A37D02 /* Pods-dummy.m */,
+				ABACFBA0EECF337E287EAA7A /* Pods-environment.h */,
+				446B58B1FE7FD13916F410BC /* Pods-resources.sh */,
+				AF1FBA1BDE9AA950F30414D8 /* Pods.debug.xcconfig */,
+				E42C6887A007CEFC69509B33 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		5653699DE195AB70DE19888A = {
+		66549AC576240F1918B6E5CA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F4A4E052AB8F684673A976F0 /* Podfile */,
-				6B0CD608FF6391685FA83A90 /* Development Pods */,
-				941CEBD40A68ABAC9F652A46 /* Frameworks */,
-				63270A838547215017A3F91B /* Products */,
-				9950C8F33AD124A867D7C2AF /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		63270A838547215017A3F91B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3A66808F189ABDD81409CC4A /* DTObservable.bundle */,
-				BBBB4E1B3C14703A83B57394 /* libPods.a */,
-				A852A9EED18E6D772673203B /* libPods-DTObservable.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6B0CD608FF6391685FA83A90 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				38238EB99A6E47E6FCB8EB08 /* DTObservable */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		941CEBD40A68ABAC9F652A46 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0B08B3572494050D933B716C /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9950C8F33AD124A867D7C2AF /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4B65F3AF65B0DC4362C61704 /* Pods */,
+				47C3E35131FF23AD7402A996 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		DD4F9BEE8BCA14D29E1A0DE1 /* Support Files */ = {
+		92BF2918DA0AC5F12C2A3D22 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				ED2711BB3040757EEB190A2C /* Pods-DTObservable.xcconfig */,
-				B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */,
-				757855A6751C39B2ACF94046 /* Pods-DTObservable-dummy.m */,
-				C306370EBD4AA2EEA1BCBF44 /* Pods-DTObservable-prefix.pch */,
+				4318EFAECFF9538E26F49780 /* Pods-DTObservable.xcconfig */,
+				242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */,
+				CE6AB43A20AB88131D843C3A /* Pods-DTObservable-dummy.m */,
+				1D161BB30C63DF5C3D9F51DD /* Pods-DTObservable-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "DTObservableExampleApp/Pods/Target Support Files/Pods-DTObservable";
 			sourceTree = "<group>";
 		};
+		AABAB848BF38CC1EFDAEB70D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BE1FCC587B41D5ED00C7EC7D /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		AAD6BA62FC7A8A8203393D7D /* DTObservable */ = {
+			isa = PBXGroup;
+			children = (
+				7C0ADA61AF204C7B94281530 /* DTObservable.h */,
+				A1871D76801998A3C9AEB7D0 /* DTObservable.m */,
+				7149C22289DA31A1D4028BDB /* DTSubscriber.h */,
+				12EE37E54E3314A3578A620E /* DTSubscriber.m */,
+				92BF2918DA0AC5F12C2A3D22 /* Support Files */,
+			);
+			name = DTObservable;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		B4C08C581DC69BC7E6BC3A4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				23EB4D74C966AE11B9CBAEC2 /* DTObservable.bundle */,
+				A1225875C31B4EAD11D1144C /* libPods.a */,
+				B47657ED45889A49BC1A9EA8 /* libPods-DTObservable.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		72DFFF4030E378EFE64E5448 /* Headers */ = {
+		48199369FEB4E9F503D243D8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E932C4F1E6111251C2B53F89 /* DTObservable.h in Headers */,
-				FCB8D9A3CC0D9C461C0DB32E /* DTSubscriber.h in Headers */,
+				13F15749304B5D155B735555 /* DTObservable.h in Headers */,
+				37EF08B5CD54630A7C16836A /* DTSubscriber.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D3781468352A7FB9DD5FEE79 /* Pods-DTObservable-DTObservable */ = {
+		17D0818971F2F9A2D22D43BC /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 835BC751BD09D57A9679BF38 /* Build configuration list for PBXNativeTarget "Pods-DTObservable-DTObservable" */;
+			buildConfigurationList = FF41B7A033ECBBD654E3E1EF /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				3BD14BC009C5377C904E3D26 /* Sources */,
-				F5C22DDEC0C18C290F677D02 /* Frameworks */,
-				D30C1926876F5D679A2400C2 /* Resources */,
+				E4A4DD884C096601D216383C /* Sources */,
+				A55E529846F0D6693C92EFB6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC3B3EA6BC2EE228686F10F9 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = A1225875C31B4EAD11D1144C /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84090405462C5F29E490FC44 /* Pods-DTObservable-DTObservable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 549937C7F27BE33EB35485D2 /* Build configuration list for PBXNativeTarget "Pods-DTObservable-DTObservable" */;
+			buildPhases = (
+				53470EEE068A3DDD86409FF7 /* Sources */,
+				3D3767232C4DAA8CE8AA21B4 /* Frameworks */,
+				38D550DE4DA35D7344199B48 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -206,73 +223,56 @@
 			);
 			name = "Pods-DTObservable-DTObservable";
 			productName = "Pods-DTObservable-DTObservable";
-			productReference = 3A66808F189ABDD81409CC4A /* DTObservable.bundle */;
+			productReference = 23EB4D74C966AE11B9CBAEC2 /* DTObservable.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		DCFB9C025813FD011E687EB2 /* Pods */ = {
+		9960A174896DC53FB6BB8F17 /* Pods-DTObservable */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BB35022CFEC05BD55E413A4C /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 5ED18F8048793389524C47F6 /* Build configuration list for PBXNativeTarget "Pods-DTObservable" */;
 			buildPhases = (
-				EC4E109D86C41A1CDB49C3A7 /* Sources */,
-				0F2813EDC58C2ABB288FC191 /* Frameworks */,
+				E43436AEB7427291E93ADD2F /* Sources */,
+				0B316ADCEBE1E449528E9324 /* Frameworks */,
+				48199369FEB4E9F503D243D8 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6E97C2718D7882AF7F97EFE1 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = BBBB4E1B3C14703A83B57394 /* libPods.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		FAE1051E9A217961E7DE5D98 /* Pods-DTObservable */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0770FC35556DCE1649581CF0 /* Build configuration list for PBXNativeTarget "Pods-DTObservable" */;
-			buildPhases = (
-				89C9CFFABCDF31E4DCF9D91B /* Sources */,
-				37D1F28A97AF46631580490A /* Frameworks */,
-				72DFFF4030E378EFE64E5448 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3AB3F7B090882E29824B896B /* PBXTargetDependency */,
+				55EFF1B8826DD37B33FAAA30 /* PBXTargetDependency */,
 			);
 			name = "Pods-DTObservable";
 			productName = "Pods-DTObservable";
-			productReference = A852A9EED18E6D772673203B /* libPods-DTObservable.a */;
+			productReference = B47657ED45889A49BC1A9EA8 /* libPods-DTObservable.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3ADB57067832932661F9BAB6 /* Project object */ = {
+		95F13883AC5EA76DFF180789 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 73F563CBB8E3CAAF898A9918 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 206322072B69500977C6C18A /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 5653699DE195AB70DE19888A;
-			productRefGroup = 63270A838547215017A3F91B /* Products */;
+			mainGroup = 30914474D48BCB1893070C8F;
+			productRefGroup = B4C08C581DC69BC7E6BC3A4B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DCFB9C025813FD011E687EB2 /* Pods */,
-				FAE1051E9A217961E7DE5D98 /* Pods-DTObservable */,
-				D3781468352A7FB9DD5FEE79 /* Pods-DTObservable-DTObservable */,
+				17D0818971F2F9A2D22D43BC /* Pods */,
+				9960A174896DC53FB6BB8F17 /* Pods-DTObservable */,
+				84090405462C5F29E490FC44 /* Pods-DTObservable-DTObservable */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D30C1926876F5D679A2400C2 /* Resources */ = {
+		38D550DE4DA35D7344199B48 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -282,50 +282,126 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3BD14BC009C5377C904E3D26 /* Sources */ = {
+		53470EEE068A3DDD86409FF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89C9CFFABCDF31E4DCF9D91B /* Sources */ = {
+		E43436AEB7427291E93ADD2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E66829192EE92FD4327FC96 /* DTObservable.m in Sources */,
-				08B4C3EECD59147FF5CF13AC /* DTSubscriber.m in Sources */,
-				D96C3F607F368AD5658655B0 /* Pods-DTObservable-dummy.m in Sources */,
+				8DD34D9C971C94F45F25B834 /* DTObservable.m in Sources */,
+				EE41ED10BDBB5D38A4B7BE06 /* DTSubscriber.m in Sources */,
+				D0F33F471CE84BC3D180D215 /* Pods-DTObservable-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC4E109D86C41A1CDB49C3A7 /* Sources */ = {
+		E4A4DD884C096601D216383C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0B41F08C286495B509CA855 /* Pods-dummy.m in Sources */,
+				B2F09328DA6513E218D7EB57 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3AB3F7B090882E29824B896B /* PBXTargetDependency */ = {
+		55EFF1B8826DD37B33FAAA30 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DTObservable-DTObservable";
-			target = D3781468352A7FB9DD5FEE79 /* Pods-DTObservable-DTObservable */;
-			targetProxy = D9B0BA5D5D1722B25949056D /* PBXContainerItemProxy */;
+			target = 84090405462C5F29E490FC44 /* Pods-DTObservable-DTObservable */;
+			targetProxy = 55DA9F33E67579AF52C8F1B3 /* PBXContainerItemProxy */;
 		};
-		6E97C2718D7882AF7F97EFE1 /* PBXTargetDependency */ = {
+		EC3B3EA6BC2EE228686F10F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-DTObservable";
-			target = FAE1051E9A217961E7DE5D98 /* Pods-DTObservable */;
-			targetProxy = 7822134FD99E35C9916C16E4 /* PBXContainerItemProxy */;
+			target = 9960A174896DC53FB6BB8F17 /* Pods-DTObservable */;
+			targetProxy = BE0B58F63594958DC070A6ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		343CEFEF6A5A75F62C912264 /* Release */ = {
+		35D30895BA26AD169299B7FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1FBA1BDE9AA950F30414D8 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		39580F7B3FF50B492C0999B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DTObservable/Pods-DTObservable-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		401E5920B221867DC9D57C93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = DTObservable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		44084D04CD277AEEABA3F9FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-DTObservable/Pods-DTObservable-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		45C945CECEC50F1B44082DE9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E42C6887A007CEFC69509B33 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		539662BBDAAE31BDAC72D296 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -359,23 +435,19 @@
 			};
 			name = Release;
 		};
-		607753C1C730D73D02BD7ED5 /* Release */ = {
+		7C0B2361A1D51835690AF120 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DFC33D051E74EA01DED5A40 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 242E7459BB3CB335D1735CB9 /* Pods-DTObservable-Private.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DTObservable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
-		74BEE42C691336284D13BCAC /* Debug */ = {
+		F471065502702370E7CE604F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -414,118 +486,46 @@
 			};
 			name = Debug;
 		};
-		8F79A2BED393250891981675 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DTObservable/Pods-DTObservable-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		95068DC3BE8A5B2E69804FBE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = DTObservable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		96D1A59A05FD4F2517A20DE2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-DTObservable/Pods-DTObservable-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		A41CB29E23FF99CFD27A00E0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAD49D916640878FA5C2742E /* Pods.debug.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		AC40BBF41C82CC23F6757372 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3A17F12330B1B59D5493633 /* Pods-DTObservable-Private.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = DTObservable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0770FC35556DCE1649581CF0 /* Build configuration list for PBXNativeTarget "Pods-DTObservable" */ = {
+		206322072B69500977C6C18A /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96D1A59A05FD4F2517A20DE2 /* Debug */,
-				8F79A2BED393250891981675 /* Release */,
+				F471065502702370E7CE604F /* Debug */,
+				539662BBDAAE31BDAC72D296 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73F563CBB8E3CAAF898A9918 /* Build configuration list for PBXProject "Pods" */ = {
+		549937C7F27BE33EB35485D2 /* Build configuration list for PBXNativeTarget "Pods-DTObservable-DTObservable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74BEE42C691336284D13BCAC /* Debug */,
-				343CEFEF6A5A75F62C912264 /* Release */,
+				401E5920B221867DC9D57C93 /* Debug */,
+				7C0B2361A1D51835690AF120 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		835BC751BD09D57A9679BF38 /* Build configuration list for PBXNativeTarget "Pods-DTObservable-DTObservable" */ = {
+		5ED18F8048793389524C47F6 /* Build configuration list for PBXNativeTarget "Pods-DTObservable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC40BBF41C82CC23F6757372 /* Debug */,
-				95068DC3BE8A5B2E69804FBE /* Release */,
+				39580F7B3FF50B492C0999B5 /* Debug */,
+				44084D04CD277AEEABA3F9FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BB35022CFEC05BD55E413A4C /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		FF41B7A033ECBBD654E3E1EF /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A41CB29E23FF99CFD27A00E0 /* Debug */,
-				607753C1C730D73D02BD7ED5 /* Release */,
+				35D30895BA26AD169299B7FB /* Debug */,
+				45C945CECEC50F1B44082DE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3ADB57067832932661F9BAB6 /* Project object */;
+	rootObject = 95F13883AC5EA76DFF180789 /* Project object */;
 }

@@ -84,92 +84,173 @@
     }];
 }
 
++ (DTObservable *)create:(void (^)(DTSubscriber *))observer {
+    return [[DTObservable alloc] init:observer];
+}
+
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(id (^)(id, id))block {
-    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
-        [observable1 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable1) {
-            [observable2 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable2) {
-                [subscriber next:block(objectFromObservable1, objectFromObservable2)];
-                [subscriber complete];
-            } onError:^(NSError *error) {
-                [subscriber error:error];
-            }]];
-        } onError:^(NSError *error) {
-            [subscriber error:error];
-        }]];
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [DTObservable just:block(object1, object2)];
+        }];
     }];
 }
 
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
         :(id (^)(id, id, id))block {
-    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
-        [observable1 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable1) {
-            [observable2 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable2) {
-                [observable3 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable3) {
-                    [subscriber next:block(objectFromObservable1, objectFromObservable2, objectFromObservable3)];
-                    [subscriber complete];
-                } onError:^(NSError *error) {
-                    [subscriber error:error];
-                }]];
-            } onError:^(NSError *error) {
-                [subscriber error:error];
-            }]];
-        } onError:^(NSError *error) {
-            [subscriber error:error];
-        }]];
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [DTObservable just:block(object1, object2, object3)];
+            }];
+        }];
     }];
 }
 
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
         :(DTObservable *)observable4 :(id (^)(id, id, id, id))block {
-    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
-        [observable1 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable1) {
-            [observable2 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable2) {
-                [observable3 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable3) {
-                    [observable4 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable4) {
-                        [subscriber next:block(objectFromObservable1, objectFromObservable2, objectFromObservable3,
-                                objectFromObservable4)];
-                        [subscriber complete];
-                    } onError:^(NSError *error) {
-                        [subscriber error:error];
-                    }]];
-                } onError:^(NSError *error) {
-                    [subscriber error:error];
-                }]];
-            } onError:^(NSError *error) {
-                [subscriber error:error];
-            }]];
-        } onError:^(NSError *error) {
-            [subscriber error:error];
-        }]];
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [DTObservable just:block(object1, object2, object3, object4)];
+                }];
+            }];
+        }];
     }];
 }
 
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
         :(DTObservable *)observable4 :(DTObservable *)observable5 :(id (^)(id, id, id, id, id))block {
-    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
-        [observable1 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable1) {
-            [observable2 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable2) {
-                [observable3 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable3) {
-                    [observable4 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable4) {
-                        [observable5 subscribe:[[DTSubscriber alloc] init:^(id objectFromObservable5) {
-                            [subscriber next:block(objectFromObservable1, objectFromObservable2, objectFromObservable3,
-                                    objectFromObservable4, objectFromObservable5)];
-                            [subscriber complete];
-                        } onError:^(NSError *error) {
-                            [subscriber error:error];
-                        }]];
-                    } onError:^(NSError *error) {
-                        [subscriber error:error];
-                    }]];
-                } onError:^(NSError *error) {
-                    [subscriber error:error];
-                }]];
-            } onError:^(NSError *error) {
-                [subscriber error:error];
-            }]];
-        } onError:^(NSError *error) {
-            [subscriber error:error];
-        }]];
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [DTObservable just:block(object1, object2, object3, object4, object5)];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
+                     :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6
+                     :(id (^)(id, id, id, id, id, id))block {
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [observable6 flatMap:^(id object6) {
+                            return [DTObservable just:block(object1, object2,
+                                                            object3, object4, object5, object6)];
+                        }];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
+                     :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6
+                     :(DTObservable *)observable7 :(id (^)(id, id, id, id, id, id, id))block {
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [observable6 flatMap:^(id object6) {
+                            return [observable7 flatMap:^(id object7) {
+                                return [DTObservable just:block(object1, object2, object3,
+                                                                object4, object5, object6, object7)];
+                            }];
+                        }];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
+                     :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6
+                     :(DTObservable *)observable7 :(DTObservable *)observable8 :(id (^)(id, id, id, id, id, id, id, id))block {
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [observable6 flatMap:^(id object6) {
+                            return [observable7 flatMap:^(id object7) {
+                                return [observable8 flatMap:^(id object8) {
+                                    return [DTObservable just:block(object1, object2, object3,
+                                                                    object4, object5, object6, object7, object8)];
+                                }];
+                            }];
+                        }];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
+                     :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6
+                     :(DTObservable *)observable7 :(DTObservable *)observable8 :(DTObservable *)observable9
+                     :(id (^)(id, id, id, id, id, id, id, id, id))block {
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [observable6 flatMap:^(id object6) {
+                            return [observable7 flatMap:^(id object7) {
+                                return [observable8 flatMap:^(id object8) {
+                                    return [observable9 flatMap:^(id object9) {
+                                        return [DTObservable just:block(object1, object2, object3,
+                                                                        object4, object5, object6, object7,
+                                                                        object8, object9)];
+                                    }];
+                                }];
+                            }];
+                        }];
+                    }];
+                }];
+            }];
+        }];
+    }];
+}
+
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3
+                     :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6
+                     :(DTObservable *)observable7 :(DTObservable *)observable8 :(DTObservable *)observable9
+                     :(DTObservable *)observable10 :(id (^)(id, id, id, id, id, id, id, id, id, id))block {
+    return [observable1 flatMap:^(id object1) {
+        return [observable2 flatMap:^(id object2) {
+            return [observable3 flatMap:^(id object3) {
+                return [observable4 flatMap:^(id object4) {
+                    return [observable5 flatMap:^(id object5) {
+                        return [observable6 flatMap:^(id object6) {
+                            return [observable7 flatMap:^(id object7) {
+                                return [observable8 flatMap:^(id object8) {
+                                    return [observable9 flatMap:^(id object9) {
+                                        return [observable10 flatMap:^(id object10) {
+                                            return [DTObservable just:block(object1, object2, object3,
+                                                                            object4, object5, object6, object7,
+                                                                            object8, object9, object10)];
+                                        }];
+                                    }];
+                                }];
+                            }];
+                        }];
+                    }];
+                }];
+            }];
+        }];
     }];
 }
 
@@ -186,6 +267,23 @@
     [self new]([[DTSubscriber alloc] init:^(id object) {} onError:^(NSError *error) {
         NSLog(@"ERROR: %@", error);
     }]);
+}
+
++ (DTObservable *)empty {
+    return [DTObservable just:nil];
+}
+
++ (DTObservable *)concat:(NSArray *)arrayOfObservables {
+    return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        for (NSUInteger i = 0; i < arrayOfObservables.count; i++) {
+            [arrayOfObservables[i] subscribe:[[DTSubscriber alloc] init:^(id object) {
+                [subscriber next:object];
+            } onError:^(NSError *error) {
+                [subscriber error:error];
+            }]];
+        }
+        [subscriber complete];
+    }];
 }
 
 @end

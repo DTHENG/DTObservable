@@ -125,7 +125,20 @@
 - (void)testConcat {
     XCTestExpectation *expectation = [self expectationWithDescription:@"High Expectations"];
     
-    NSArray *observables = @[[[DTObservable alloc] init:^(DTSubscriber *subscriber) {}]];
+    NSArray *observables = @[[DTObservable create:^(DTSubscriber *subscriber) {
+        [subscriber next:@{@"4":@20}];
+        [subscriber complete];
+    }]];
+    
+    [[DTObservable concat:observables] subscribe:[[DTSubscriber alloc] init:^(NSDictionary *result) {
+        if ([result[@"4"] intValue] != 20) {
+            XCTFail(@"Unexpected result returned: %@", result);
+        }
+        [expectation fulfill];
+    } onError:^(NSError *error) {
+        XCTFail(@"Example failed with error: %@", error);
+        [expectation fulfill];
+    }]];
     
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
         if (error) {

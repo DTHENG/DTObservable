@@ -23,6 +23,13 @@
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(id (^)(id, id, id))block;
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(id (^)(id, id, id, id))block;
 + (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(id (^)(id, id, id, id, id))block;
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6 :(id (^)(id, id, id, id, id, id))block;
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6 :(DTObservable *)observable7 :(id (^)(id, id, id, id, id, id, id))block;
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6 :(DTObservable *)observable7 :(DTObservable *)observable8 :(id (^)(id, id, id, id, id, id, id, id))block;
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6 :(DTObservable *)observable7 :(DTObservable *)observable8 :(DTObservable *)observable9 :(id (^)(id, id, id, id, id, id, id, id, id))block;
++ (DTObservable *)zip:(DTObservable *)observable1 :(DTObservable *)observable2 :(DTObservable *)observable3 :(DTObservable *)observable4 :(DTObservable *)observable5 :(DTObservable *)observable6 :(DTObservable *)observable7 :(DTObservable *)observable8 :(DTObservable *)observable9 :(DTObservable *)observable10 :(id (^)(id, id, id, id, id, id, id, id, id, id))block;
 + (DTObservable *)just:(id)object;
++ (DTObservable *)empty;
++ (DTObservable *)concat:(NSArray *)arrayOfObservables;
 
 @end

@@ -275,13 +275,15 @@
 
 + (DTObservable *)concat:(NSArray *)arrayOfObservables {
     return [[DTObservable alloc] init:^(DTSubscriber *subscriber) {
+        NSMutableArray *results = [[NSMutableArray alloc] init];
         for (NSUInteger i = 0; i < arrayOfObservables.count; i++) {
             [arrayOfObservables[i] subscribe:[[DTSubscriber alloc] init:^(id object) {
-                [subscriber next:object];
+                [results addObject:object];
             } onError:^(NSError *error) {
                 [subscriber error:error];
             }]];
         }
+        [subscriber next:[NSArray arrayWithArray:results]];
         [subscriber complete];
     }];
 }

@@ -38,25 +38,25 @@ Swift:
 ```swift
 DTObservable({ subscriber in
 
-    // Setup some data
-    let value = ["4":20]
+        // Setup some data
+        let value = ["4":20]
 
-    // Notify the subscriber
-    subscriber.next(value)
-    subscriber.complete()
-})
-.subscribe(DTSubscriber({ value in
+        // Notify the subscriber
+        subscriber.next(value)
+        subscriber.complete()
+    })
+    .subscribe(DTSubscriber({ value in
 
-    // Confirm the result
-    let fourTwenty = value["4"] as! Int == 20
+        // Confirm the result
+        let fourTwenty = value["4"] as! Int == 20
 
-    // Success!
-    print("Does 4 == 20? %@", fourTwenty ? "yes" : "no")
-}) { error in
+        // Success!
+        print("Does 4 == 20? %@", fourTwenty ? "yes" : "no")
+    }) { error in
 
-    // Something went wrong :(
-    print(error)
-})
+        // Something went wrong :(
+        print(error)
+    })
 ```
 
 - - -

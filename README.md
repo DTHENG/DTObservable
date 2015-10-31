@@ -7,6 +7,35 @@
 
 ## Simple style, powerful implications
 
+In swift:
+
+```swift
+DTObservable({ subscriber in
+
+        // Setup some data
+        let value = ["4":20]
+
+        // Lets pretend something cpu intensive happens here
+        NSThread.sleepForTimeInterval(1)
+
+        // Notify the subscriber
+        subscriber.next(value)
+        subscriber.complete()
+    })
+    .subscribe(DTSubscriber({ value in
+
+        // Confirm the result
+        let fourTwenty = value["4"] as! Int == 20
+
+        // Success!
+        print("Does 4 == 20? %@", fourTwenty ? "yes" : "no")
+    }) { error in
+        print(error)
+    })
+```
+
+
+In objective-c:
 ```obj-c
 [[[DTObservable alloc] init:^(DTSubscriber *subscriber) {
 
@@ -49,4 +78,3 @@ DTHENG, fender5289@gmail.com
 ## License
 
 DTObservable is available under the MIT license. See the LICENSE file for more info.
-
